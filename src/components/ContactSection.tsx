@@ -20,18 +20,95 @@ const ContactSection = () => {
     message: string;
   }>({ type: null, message: '' });
 
+  const getBrowserMetadata = () => {
+    const userAgent = navigator.userAgent;
+    const platform = navigator.platform;
+    const language = navigator.language;
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const screenResolution = `${screen.width}x${screen.height}`;
+    const referrer = document.referrer || 'Direct';
+    
+    // Parse browser info
+    let browserName = 'Unknown';
+    let browserVersion = 'Unknown';
+    
+    if (userAgent.includes('Chrome')) {
+      browserName = 'Chrome';
+      const match = userAgent.match(/Chrome\/(\d+\.\d+)/);
+      browserVersion = match ? match[1] : 'Unknown';
+    } else if (userAgent.includes('Firefox')) {
+      browserName = 'Firefox';
+      const match = userAgent.match(/Firefox\/(\d+\.\d+)/);
+      browserVersion = match ? match[1] : 'Unknown';
+    } else if (userAgent.includes('Safari') && !userAgent.includes('Chrome')) {
+      browserName = 'Safari';
+      const match = userAgent.match(/Version\/(\d+\.\d+)/);
+      browserVersion = match ? match[1] : 'Unknown';
+    } else if (userAgent.includes('Edge')) {
+      browserName = 'Edge';
+      const match = userAgent.match(/Edge\/(\d+\.\d+)/);
+      browserVersion = match ? match[1] : 'Unknown';
+    }
+    
+    // Parse OS info
+    let osName = 'Unknown';
+    let osVersion = 'Unknown';
+    
+    if (userAgent.includes('Windows')) {
+      osName = 'Windows';
+      if (userAgent.includes('Windows NT 10.0')) osVersion = '10/11';
+      else if (userAgent.includes('Windows NT 6.3')) osVersion = '8.1';
+      else if (userAgent.includes('Windows NT 6.1')) osVersion = '7';
+    } else if (userAgent.includes('Mac OS X')) {
+      osName = 'macOS';
+      const match = userAgent.match(/Mac OS X (\d+[._]\d+)/);
+      osVersion = match ? match[1].replace('_', '.') : 'Unknown';
+    } else if (userAgent.includes('Linux')) {
+      osName = 'Linux';
+      osVersion = 'Unknown';
+    } else if (userAgent.includes('Android')) {
+      osName = 'Android';
+      const match = userAgent.match(/Android (\d+\.\d+)/);
+      osVersion = match ? match[1] : 'Unknown';
+    } else if (userAgent.includes('iPhone') || userAgent.includes('iPad')) {
+      osName = 'iOS';
+      const match = userAgent.match(/OS (\d+[._]\d+)/);
+      osVersion = match ? match[1].replace('_', '.') : 'Unknown';
+    }
+    
+    return {
+      userAgent,
+      platform,
+      language,
+      timezone,
+      screenResolution,
+      browserName,
+      browserVersion,
+      osName,
+      osVersion,
+      referrer,
+      timestamp: new Date().toISOString()
+    };
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setNotification({ type: null, message: '' });
     
     try {
+      const metadata = getBrowserMetadata();
+      const formDataWithMetadata = {
+        ...formData,
+        metadata
+      };
+      
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(formDataWithMetadata),
       });
 
       const result = await response.json();

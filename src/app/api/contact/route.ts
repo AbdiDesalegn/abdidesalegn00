@@ -5,7 +5,7 @@ const TELEGRAM_CHAT_ID = '1481941392'; // Your actual Telegram chat ID
 
 export async function POST(request: NextRequest) {
   try {
-    const { name, email, message } = await request.json();
+    const { name, email, message, metadata } = await request.json();
     
     // Get client IP address
     const forwarded = request.headers.get('x-forwarded-for');
@@ -32,7 +32,7 @@ export async function POST(request: NextRequest) {
       timeZoneName: 'short'
     });
 
-    // Format the message for Telegram
+    // Format the message for Telegram with metadata
     const telegramMessage = `
 📧 *New Contact Form Submission*
 
@@ -43,6 +43,18 @@ ${message}
 
 🌐 *IP Address:* ${clientIp}
 🕒 *Timestamp:* ${timestamp}
+
+📱 *System Information:*
+${metadata ? `
+🖥️ *OS:* ${metadata.osName} ${metadata.osVersion}
+🌐 *Browser:* ${metadata.browserName} ${metadata.browserVersion}
+📱 *Platform:* ${metadata.platform}
+🖼️ *Screen:* ${metadata.screenResolution}
+🌍 *Language:* ${metadata.language}
+⏰ *Timezone:* ${metadata.timezone}
+🔗 *Referrer:* ${metadata.referrer}
+` : 'No metadata available'}
+
 ---
 *Sent from your portfolio website*
     `;

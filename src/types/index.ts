@@ -43,4 +43,17 @@ export interface FormData {
   email: string;
   subject: string;
   message: string;
+  metadata?: {
+    userAgent: string;
+    platform: string;
+    language: string;
+    timezone: string;
+    screenResolution: string;
+    browserName: string;
+    browserVersion: string;
+    osName: string;
+    osVersion: string;
+    referrer: string;
+    timestamp: string;
+  };
 }
