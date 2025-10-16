@@ -178,7 +178,7 @@ export const EXPERIENCE = [
   {
     company: 'Competitive Programming Division (CPD)',
     position: 'Member',
-    period: '2021 – 2025',
+    period: '2022 – 2024',
     location: 'ASTU',
     description: [
       'Participated in university-level competitive programming contests representing ASTU.',
