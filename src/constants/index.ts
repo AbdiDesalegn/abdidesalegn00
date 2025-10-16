@@ -32,6 +32,16 @@ export const INTERESTS = [
 
 export const PROJECTS: Project[] = [
   {
+    title: 'Computational Study of Quantum Tunneling in Josephson Junctions',
+    description: 'Published research paper on quantum tunneling phenomena in Josephson junctions using finite difference methods to solve the time-independent Schrödinger equation. Demonstrates macroscopic quantum mechanical effects and energy quantization in superconducting circuits.',
+    category: 'Physics',
+    stack: ['Python', 'Quantum Mechanics', 'Finite Difference Methods', 'Schrödinger Equation', 'Computational Physics', 'Research'],
+    gradient: 'from-purple-500 to-indigo-500',
+    github: 'https://github.com/AbdiDesalegn/Josephson-quantum-tunneling-research-2025-physics-nobel-',
+    demo: 'https://www.researchgate.net/publication/396529275_Computational_Study_of_Quantum_Tunneling_in_Josephson_Junctions_Computational_Study_of_Quantum_Tunneling_in_Josephson_Junctions_A_Numerical_Analysis_of_Nobel_Prize_2025_Physics',
+    image: '/quantum-tunneling-research.png'
+  },
+  {
     title: 'Legacy System Modernization',
     description: 'Converting 20+ year COBOL-based financial system into modern Python-based GUI application with data migration.',
     category: 'Development',
