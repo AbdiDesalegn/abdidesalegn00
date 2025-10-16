@@ -77,7 +77,7 @@ const EducationSection = () => {
                           <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                           </svg>
-                          2020 - 2025
+                          2021 - 2025
                         </div>
                       </div>
                     </div>
@@ -85,10 +85,10 @@ const EducationSection = () => {
                     <div className="bg-white/60 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 border-2 border-gray-100 hover:border-orange-500 transition-all">
                       <p className="text-gray-800 leading-relaxed text-sm sm:text-base md:text-lg font-medium">
                         Comprehensive study of computer science fundamentals, software engineering, 
-                        advanced mathematics, and theoretical physics. Specialized coursework in 
-                        machine learning, cybersecurity implementations, and quantum computing applications. 
-                        Developed expertise in full-stack development, mobile applications, and 
-                        computational physics simulations.
+                        advanced mathematics, and computational physics. Specialized coursework in 
+                        machine learning, cybersecurity implementations, and full-stack development. 
+                        Developed expertise in React Native mobile development, MERN stack applications, 
+                        and computational physics using machine learning tools.
                       </p>
                     </div>
                   </div>

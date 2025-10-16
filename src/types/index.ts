@@ -6,6 +6,7 @@ export interface Project {
   gradient: string;
   github: string;
   demo: string;
+  image?: string;
 }
 
 export interface BlogPost {

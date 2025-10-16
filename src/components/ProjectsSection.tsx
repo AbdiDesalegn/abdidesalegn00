@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Github, ExternalLink, Code } from 'lucide-react';
+import Image from 'next/image';
 import { PROJECTS, PROJECT_CATEGORIES } from '@/constants';
 
 const ProjectsSection = () => {
@@ -60,18 +61,46 @@ const ProjectsSection = () => {
                 className="relative group cursor-pointer"
               >
                 <div className="glass-card rounded-2xl sm:rounded-3xl overflow-hidden h-full flex flex-col border-2 border-transparent group-hover:border-orange-500 transition-all duration-300">
-                  <div className={`h-40 sm:h-48 md:h-56 bg-gradient-to-br ${project.gradient} flex items-center justify-center relative overflow-hidden`}>
-                    <motion.div
-                      initial={{ scale: 1, rotate: 0 }}
-                      whileHover={{ scale: 1.15, rotate: 5 }}
-                      transition={{ duration: 0.3 }}
-                      className="relative z-10"
-                    >
-                      <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl flex items-center justify-center border border-white/20">
-                        <Code className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-white" />
-                      </div>
-                    </motion.div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  <div className={`h-40 sm:h-48 md:h-56 relative overflow-hidden ${project.image ? '' : `bg-gradient-to-br ${project.gradient}`}`}>
+                    {project.image ? (
+                      <>
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          fill
+                          className={`transition-transform duration-300 group-hover:scale-110 ${
+                            project.title.toLowerCase().includes('baby') || project.title.toLowerCase().includes('mobile') || project.title.toLowerCase().includes('app')
+                              ? 'object-contain bg-gray-50' 
+                              : 'object-cover'
+                          }`}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <motion.div
+                          initial={{ scale: 1, rotate: 0 }}
+                          whileHover={{ scale: 1.15, rotate: 5 }}
+                          transition={{ duration: 0.3 }}
+                          className="absolute top-4 right-4 z-10"
+                        >
+                          <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/30">
+                            <Code className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
+                          </div>
+                        </motion.div>
+                      </>
+                    ) : (
+                      <>
+                        <motion.div
+                          initial={{ scale: 1, rotate: 0 }}
+                          whileHover={{ scale: 1.15, rotate: 5 }}
+                          transition={{ duration: 0.3 }}
+                          className="relative z-10 flex items-center justify-center h-full"
+                        >
+                          <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl flex items-center justify-center border border-white/20">
+                            <Code className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-white" />
+                          </div>
+                        </motion.div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                      </>
+                    )}
                   </div>
                   
                   <div className="p-4 sm:p-6 md:p-8 flex-1 flex flex-col">

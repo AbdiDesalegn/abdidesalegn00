@@ -3,7 +3,8 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { 
   Mail, 
-  ChevronDown
+  ChevronDown,
+  Download
 } from 'lucide-react';
 import { SOCIAL_LINKS } from '@/constants';
 
@@ -47,7 +48,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-600 mb-6 sm:mb-8 font-light"
         >
-          Passionate Developer & Creative Problem Solver
+          Developer/Research Enthusiast
         </motion.p>
         
         <motion.p
@@ -56,11 +57,10 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-500 mb-12 sm:mb-16 md:mb-20 max-w-4xl mx-auto leading-relaxed px-4"
         >
-          Computer Science & Engineering graduate specializing in{' '}
-          <span className="text-black font-semibold bg-gradient-to-r from-orange-100 to-orange-50 px-1 py-0.5 sm:px-2 sm:py-1 rounded-md text-xs sm:text-sm md:text-base">MERN stack</span>,{' '}
-          <span className="text-black font-semibold bg-gradient-to-r from-orange-100 to-orange-50 px-1 py-0.5 sm:px-2 sm:py-1 rounded-md text-xs sm:text-sm md:text-base">React Native</span>,{' '}
-          <span className="text-black font-semibold bg-gradient-to-r from-orange-100 to-orange-50 px-1 py-0.5 sm:px-2 sm:py-1 rounded-md text-xs sm:text-sm md:text-base">Machine Learning</span> for physics applications, 
-          and <span className="text-black font-semibold bg-gradient-to-r from-orange-100 to-orange-50 px-1 py-0.5 sm:px-2 sm:py-1 rounded-md text-xs sm:text-sm md:text-base">cybersecurity</span> solutions.
+          Passionate Computer Science and Engineering graduate with strong expertise in{' '}
+          <span className="text-black font-semibold bg-gradient-to-r from-orange-100 to-orange-50 px-1 py-0.5 sm:px-2 sm:py-1 rounded-md text-xs sm:text-sm md:text-base">mobile development</span> (React Native),{' '}
+          <span className="text-black font-semibold bg-gradient-to-r from-orange-100 to-orange-50 px-1 py-0.5 sm:px-2 sm:py-1 rounded-md text-xs sm:text-sm md:text-base">MERN full-stack</span> web development, 
+          and <span className="text-black font-semibold bg-gradient-to-r from-orange-100 to-orange-50 px-1 py-0.5 sm:px-2 sm:py-1 rounded-md text-xs sm:text-sm md:text-base">computational physics</span> using machine learning tools.
         </motion.p>
         
         <motion.div
@@ -86,6 +86,16 @@ const HeroSection = () => {
           >
             <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
             Contact Me
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(34, 197, 94, 0.4)' }}
+            whileTap={{ scale: 0.95 }}
+            href="/Abdi-Desalegn-Resume.pdf"
+            download="Abdi-Desalegn-Resume.pdf"
+            className="btn-primary px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 text-sm sm:text-base md:text-lg flex items-center gap-2 sm:gap-3 w-full sm:w-auto justify-center"
+          >
+            <Download className="w-4 h-4 sm:w-5 sm:h-5" />
+            Download Resume
           </motion.a>
         </motion.div>
 

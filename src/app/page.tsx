@@ -2,8 +2,9 @@ import {
   Navigation,
   HeroSection,
   AboutSection,
+  ExperienceSection,
   ProjectsSection,
-  BlogSection,
+  CertificatesSection,
   EducationSection,
   ContactSection,
   Footer
@@ -17,9 +18,11 @@ export default function Home() {
       <div className="py-32"></div>
       <AboutSection />
       <div className="py-32"></div>
+      <ExperienceSection />
+      <div className="py-32"></div>
       <ProjectsSection />
       <div className="py-32"></div>
-      <BlogSection />
+      <CertificatesSection />
       <div className="py-32"></div>
       <EducationSection />
       <div className="py-32"></div>
