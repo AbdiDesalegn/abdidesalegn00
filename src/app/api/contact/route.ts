@@ -32,27 +32,51 @@ export async function POST(request: NextRequest) {
       timeZoneName: 'short'
     });
 
+    // Escape special characters for Telegram Markdown
+    const escapeMarkdown = (text: string) => {
+      return text
+        .replace(/\\/g, '\\\\')
+        .replace(/\*/g, '\\*')
+        .replace(/_/g, '\\_')
+        .replace(/\[/g, '\\[')
+        .replace(/\]/g, '\\]')
+        .replace(/\(/g, '\\(')
+        .replace(/\)/g, '\\)')
+        .replace(/~/g, '\\~')
+        .replace(/`/g, '\\`')
+        .replace(/>/g, '\\>')
+        .replace(/#/g, '\\#')
+        .replace(/\+/g, '\\+')
+        .replace(/-/g, '\\-')
+        .replace(/=/g, '\\=')
+        .replace(/\|/g, '\\|')
+        .replace(/\{/g, '\\{')
+        .replace(/\}/g, '\\}')
+        .replace(/\./g, '\\.')
+        .replace(/!/g, '\\!');
+    };
+
     // Format the message for Telegram with metadata
     const telegramMessage = `
 📧 *New Contact Form Submission*
 
-👤 *Name:* ${name}
-📧 *Email:* ${email}
+👤 *Name:* ${escapeMarkdown(name)}
+📧 *Email:* ${escapeMarkdown(email)}
 💬 *Message:*
-${message}
+${escapeMarkdown(message)}
 
-🌐 *IP Address:* ${clientIp}
-🕒 *Timestamp:* ${timestamp}
+🌐 *IP Address:* ${escapeMarkdown(clientIp)}
+🕒 *Timestamp:* ${escapeMarkdown(timestamp)}
 
 📱 *System Information:*
 ${metadata ? `
-🖥️ *OS:* ${metadata.osName} ${metadata.osVersion}
-🌐 *Browser:* ${metadata.browserName} ${metadata.browserVersion}
-📱 *Platform:* ${metadata.platform}
-🖼️ *Screen:* ${metadata.screenResolution}
-🌍 *Language:* ${metadata.language}
-⏰ *Timezone:* ${metadata.timezone}
-🔗 *Referrer:* ${metadata.referrer}
+🖥️ *OS:* ${escapeMarkdown(metadata.osName)} ${escapeMarkdown(metadata.osVersion)}
+🌐 *Browser:* ${escapeMarkdown(metadata.browserName)} ${escapeMarkdown(metadata.browserVersion)}
+📱 *Platform:* ${escapeMarkdown(metadata.platform)}
+🖼️ *Screen:* ${escapeMarkdown(metadata.screenResolution)}
+🌍 *Language:* ${escapeMarkdown(metadata.language)}
+⏰ *Timezone:* ${escapeMarkdown(metadata.timezone)}
+🔗 *Referrer:* ${escapeMarkdown(metadata.referrer)}
 ` : 'No metadata available'}
 
 ---
@@ -78,12 +102,68 @@ ${metadata ? `
     if (!telegramResponse.ok) {
       const errorData = await telegramResponse.json();
       console.error('Telegram API error:', errorData);
-      console.error('Response status:', telegramResponse.status);
-      console.error('Chat ID used:', TELEGRAM_CHAT_ID);
-      return NextResponse.json(
-        { error: `Failed to send message: ${errorData.description || 'Unknown error'}` },
-        { status: 500 }
-      );
+      
+      // If Markdown parsing fails, try with HTML parsing mode
+      if (errorData.description && errorData.description.includes('parse')) {
+        console.log('Retrying with HTML parsing mode...');
+        
+        const htmlMessage = `
+📧 <b>New Contact Form Submission</b>
+
+👤 <b>Name:</b> ${name}
+📧 <b>Email:</b> ${email}
+💬 <b>Message:</b>
+${message}
+
+🌐 <b>IP Address:</b> ${clientIp}
+🕒 <b>Timestamp:</b> ${timestamp}
+
+📱 <b>System Information:</b>
+${metadata ? `
+🖥️ <b>OS:</b> ${metadata.osName} ${metadata.osVersion}
+🌐 <b>Browser:</b> ${metadata.browserName} ${metadata.browserVersion}
+📱 <b>Platform:</b> ${metadata.platform}
+🖼️ <b>Screen:</b> ${metadata.screenResolution}
+🌍 <b>Language:</b> ${metadata.language}
+⏰ <b>Timezone:</b> ${metadata.timezone}
+🔗 <b>Referrer:</b> ${metadata.referrer}
+` : 'No metadata available'}
+
+---
+<i>Sent from your portfolio website</i>
+        `;
+        
+        const retryResponse = await fetch(
+          `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              chat_id: TELEGRAM_CHAT_ID,
+              text: htmlMessage,
+              parse_mode: 'HTML',
+            }),
+          }
+        );
+        
+        if (!retryResponse.ok) {
+          const retryErrorData = await retryResponse.json();
+          console.error('Telegram API retry error:', retryErrorData);
+          return NextResponse.json(
+            { error: `Failed to send message: ${retryErrorData.description || 'Unknown error'}` },
+            { status: 500 }
+          );
+        }
+      } else {
+        console.error('Response status:', telegramResponse.status);
+        console.error('Chat ID used:', TELEGRAM_CHAT_ID);
+        return NextResponse.json(
+          { error: `Failed to send message: ${errorData.description || 'Unknown error'}` },
+          { status: 500 }
+        );
+      }
     }
 
     return NextResponse.json(
