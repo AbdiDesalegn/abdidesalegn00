@@ -141,6 +141,28 @@ export const NAVIGATION_ITEMS = ['About', 'Experience', 'Projects', 'Certificate
 // Experience data
 export const EXPERIENCE = [
   {
+    company: 'INSA, Cyber Talent',
+    position: 'AV Developer',
+    period: '2022 – 2023',
+    location: 'Ethiopia',
+    description: [
+      'Worked on developing and testing antivirus (AV) solutions in C.',
+      'Implemented detection mechanisms for malware and security threats.',
+      'Gained hands-on experience with firewall operations and configuration on Linux systems.'
+    ]
+  },
+  {
+    company: 'Competitive Programming Division (CPD)',
+    position: 'Member',
+    period: '2022 – 2024',
+    location: 'ASTU',
+    description: [
+      'Participated in university-level competitive programming contests representing ASTU.',
+      'Solved algorithmic and computational problems using C++ and Python.',
+      'Enhanced skills in problem solving, data structures, and algorithm design.'
+    ]
+  },
+  {
     company: 'INSA',
     position: 'MERN Stack Developer Intern',
     period: '2023 – 2024',
@@ -162,28 +184,6 @@ export const EXPERIENCE = [
       'Converted, updated, and maintained a 20+ year-old COBOL-based financial system.',
       'Ensured system reliability and continuity while modernizing key components.',
       'Performed debugging, testing, and optimization for critical financial operations.'
-    ]
-  },
-  {
-    company: 'INSA, Cyber Talent',
-    position: 'AV Developer',
-    period: '2022 – 2023',
-    location: 'Ethiopia',
-    description: [
-      'Worked on developing and testing antivirus (AV) solutions in C.',
-      'Implemented detection mechanisms for malware and security threats.',
-      'Gained hands-on experience with firewall operations and configuration on Linux systems.'
-    ]
-  },
-  {
-    company: 'Competitive Programming Division (CPD)',
-    position: 'Member',
-    period: '2022 – 2024',
-    location: 'ASTU',
-    description: [
-      'Participated in university-level competitive programming contests representing ASTU.',
-      'Solved algorithmic and computational problems using C++ and Python.',
-      'Enhanced skills in problem solving, data structures, and algorithm design.'
     ]
   },
   {
