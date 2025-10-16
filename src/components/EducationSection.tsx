@@ -47,7 +47,7 @@ const EducationSection = () => {
                   >
                     <div className="education-photo w-32 h-40 sm:w-40 sm:h-48 md:w-48 md:h-56 rounded-xl sm:rounded-2xl overflow-hidden relative">
                       <Image
-                        src="/image.png"
+                        src="/profile-photo.png"
                         alt="Abdi's Photo"
                         width={192}
                         height={224}
