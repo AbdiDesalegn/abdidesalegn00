@@ -141,6 +141,19 @@ export const NAVIGATION_ITEMS = ['About', 'Experience', 'Projects', 'Certificate
 // Experience data
 export const EXPERIENCE = [
   {
+    company: 'INSA',
+    position: 'MERN Stack Developer Intern',
+    period: '2023 – 2024',
+    location: 'Ethiopia',
+    description: [
+      'Developed a full-stack chat application using MERN stack technologies.',
+      'Implemented real-time messaging features with WebSocket integration.',
+      'Built responsive frontend components using React.js and modern UI/UX principles.',
+      'Designed and developed RESTful APIs using Node.js and Express.js.',
+      'Managed database operations and data modeling with MongoDB.'
+    ]
+  },
+  {
     company: 'Fincha Sugar Factory',
     position: 'Intern Developer/ System Admin',
     period: '2024 – 2025',
