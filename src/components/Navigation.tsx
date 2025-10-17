@@ -135,7 +135,7 @@ const Navigation = () => {
                 transition={{ delay: (NAVIGATION_ITEMS.length + 1) * 0.1, duration: 0.3 }}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="btn-primary px-8 py-4 text-base block text-center w-full font-semibold shadow-lg"
+                className="btn-primary px-4 py-2 sm:px-8 sm:py-4 text-sm sm:text-base block text-center w-full font-semibold shadow-lg"
               >
                 Let's Talk
               </motion.a>
