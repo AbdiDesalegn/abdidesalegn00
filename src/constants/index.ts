@@ -56,8 +56,8 @@ export const PROJECTS: Project[] = [
     category: 'Web',
     stack: ['React', 'Node.js', 'MongoDB', 'Express'],
     gradient: 'from-green-500 to-teal-500',
-    github: '#',
-    demo: '#',
+    github: 'https://github.com/AbdiDesalegn/StudentProductivityHub',
+    demo: 'https://student-productivity-hub-mgis.vercel.app/',
     image: '/student-productivity-hub.jpg'
   },
   {
