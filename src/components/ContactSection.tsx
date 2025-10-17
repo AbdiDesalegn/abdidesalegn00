@@ -172,10 +172,10 @@ const ContactSection = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.05, x: 10 }}
-                  className="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 flex items-center gap-3 sm:gap-4 md:gap-5 group cursor-pointer border-2 border-transparent hover:border-orange-500 transition-all"
+                  className="glass-card rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 flex items-center gap-4 sm:gap-5 md:gap-6 group cursor-pointer border-2 border-transparent hover:border-orange-500 transition-all"
                 >
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl sm:rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all shadow-lg">
-                    <Icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl sm:rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all shadow-lg">
+                    <Icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white" />
                   </div>
                   <div>
                     <h3 className="font-bold text-black mb-1 sm:mb-2 text-sm sm:text-base md:text-lg">{label}</h3>
@@ -200,8 +200,8 @@ const ContactSection = () => {
                 
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8 md:mb-10">
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg">
-                      <svg className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg">
+                      <svg className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                       </svg>
                     </div>
@@ -219,10 +219,10 @@ const ContactSection = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.2, y: -8 }}
-                        className={`w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-black text-white rounded-lg sm:rounded-xl md:rounded-2xl flex items-center justify-center ${color} transition-all shadow-lg hover:shadow-xl`}
+                        className={`w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 bg-black text-white rounded-lg sm:rounded-xl md:rounded-2xl flex items-center justify-center ${color} transition-all shadow-lg hover:shadow-xl`}
                         aria-label={label}
                       >
-                        <Icon className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7" />
+                        <Icon className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6" />
                       </motion.a>
                     ))}
                   </div>
@@ -249,8 +249,8 @@ const ContactSection = () => {
                 
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8 md:mb-10">
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg">
-                      <Mail className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg">
+                      <Mail className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white" />
                     </div>
                     <div>
                       <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">Send me a message</h3>
@@ -258,10 +258,10 @@ const ContactSection = () => {
                     </div>
                   </div>
                   
-                  <div className="space-y-6 sm:space-y-8">
+                  <div className="space-y-7 sm:space-y-8">
                     <div>
-                      <label className="block text-sm sm:text-base md:text-lg font-bold text-gray-800 mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3">
-                        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <label className="block text-sm sm:text-base md:text-lg font-bold text-gray-800 mb-4 sm:mb-5 flex items-center gap-3 sm:gap-4">
+                        <svg className="w-3 h-3 sm:w-4 sm:h-4 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                         </svg>
                         Your Name
@@ -277,8 +277,8 @@ const ContactSection = () => {
                     </div>
                     
                     <div>
-                      <label className="block text-sm sm:text-base md:text-lg font-bold text-gray-800 mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3">
-                        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <label className="block text-sm sm:text-base md:text-lg font-bold text-gray-800 mb-4 sm:mb-5 flex items-center gap-3 sm:gap-4">
+                        <svg className="w-3 h-3 sm:w-4 sm:h-4 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
                         Your Email
@@ -294,8 +294,8 @@ const ContactSection = () => {
                     </div>
                     
                     <div>
-                      <label className="block text-sm sm:text-base md:text-lg font-bold text-gray-800 mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3">
-                        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <label className="block text-sm sm:text-base md:text-lg font-bold text-gray-800 mb-4 sm:mb-5 flex items-center gap-3 sm:gap-4">
+                        <svg className="w-3 h-3 sm:w-4 sm:h-4 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
                         </svg>
                         Subject
@@ -311,8 +311,8 @@ const ContactSection = () => {
                     </div>
                     
                     <div>
-                      <label className="block text-sm sm:text-base md:text-lg font-bold text-gray-800 mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3">
-                        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <label className="block text-sm sm:text-base md:text-lg font-bold text-gray-800 mb-4 sm:mb-5 flex items-center gap-3 sm:gap-4">
+                        <svg className="w-3 h-3 sm:w-4 sm:h-4 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                         </svg>
                         Your Message
@@ -340,9 +340,9 @@ const ContactSection = () => {
                         }`}
                       >
                         {notification.type === 'success' ? (
-                          <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-green-600 flex-shrink-0 mt-0.5 sm:mt-0" />
+                          <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 flex-shrink-0 mt-0.5 sm:mt-0" />
                         ) : (
-                          <XCircle className="w-5 h-5 sm:w-6 sm:h-6 text-red-600 flex-shrink-0 mt-0.5 sm:mt-0" />
+                          <XCircle className="w-4 h-4 sm:w-5 sm:h-5 text-red-600 flex-shrink-0 mt-0.5 sm:mt-0" />
                         )}
                         <p className="font-medium text-sm sm:text-base leading-relaxed">{notification.message}</p>
                       </motion.div>
@@ -366,9 +366,9 @@ const ContactSection = () => {
                       }`}></div>
                       <div className="relative z-10 flex items-center gap-2 sm:gap-3 md:gap-4">
                         {isSubmitting ? (
-                          <Loader2 className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 animate-spin" />
+                          <Loader2 className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 animate-spin" />
                         ) : (
-                          <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                           </svg>
                         )}
@@ -376,7 +376,7 @@ const ContactSection = () => {
                           {isSubmitting ? 'Sending...' : 'Send Message'}
                         </span>
                         {!isSubmitting && (
-                          <ChevronDown className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 rotate-[-90deg] group-hover:translate-x-2 transition-transform" />
+                          <ChevronDown className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 rotate-[-90deg] group-hover:translate-x-2 transition-transform" />
                         )}
                       </div>
                     </motion.button>

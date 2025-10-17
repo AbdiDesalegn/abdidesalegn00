@@ -3,8 +3,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { 
   Mail, 
-  ChevronDown,
-  Download
+  ChevronDown
 } from 'lucide-react';
 import { SOCIAL_LINKS } from '@/constants';
 
@@ -67,35 +66,25 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4"
+          className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4"
         >
           <motion.a
-            whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(255, 107, 53, 0.4)' }}
+            whileHover={{ scale: 1.02, boxShadow: '0 10px 20px rgba(255, 107, 53, 0.3)' }}
             whileTap={{ scale: 0.95 }}
             href="#projects"
-            className="btn-primary px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 text-sm sm:text-base md:text-lg flex items-center gap-2 sm:gap-3 w-full sm:w-auto justify-center"
+            className="btn-primary px-3 py-1.5 sm:px-6 sm:py-3 text-xs sm:text-sm flex items-center gap-1 sm:gap-2 w-auto justify-center min-w-[120px]"
           >
             View Projects
-            <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5" />
+            <ChevronDown className="w-3 h-3 sm:w-4 sm:h-4" />
           </motion.a>
           <motion.a
-            whileHover={{ scale: 1.05, boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1)' }}
+            whileHover={{ scale: 1.02, boxShadow: '0 8px 20px rgba(0, 0, 0, 0.1)' }}
             whileTap={{ scale: 0.95 }}
             href="#contact"
-            className="btn-secondary px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 text-sm sm:text-base md:text-lg flex items-center gap-2 sm:gap-3 w-full sm:w-auto justify-center"
+            className="btn-secondary px-3 py-1.5 sm:px-6 sm:py-3 text-xs sm:text-sm flex items-center gap-1 sm:gap-2 w-auto justify-center min-w-[120px]"
           >
-            <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
+            <Mail className="w-3 h-3 sm:w-4 sm:h-4" />
             Contact Me
-          </motion.a>
-          <motion.a
-            whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(34, 197, 94, 0.4)' }}
-            whileTap={{ scale: 0.95 }}
-            href="/Abdi-Desalegn-Resume.pdf"
-            download="Abdi-Desalegn-Resume.pdf"
-            className="btn-primary px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 text-sm sm:text-base md:text-lg flex items-center gap-2 sm:gap-3 w-full sm:w-auto justify-center"
-          >
-            <Download className="w-4 h-4 sm:w-5 sm:h-5" />
-            Download Resume
           </motion.a>
         </motion.div>
 

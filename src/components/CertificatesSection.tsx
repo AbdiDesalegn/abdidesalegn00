@@ -34,11 +34,11 @@ const CertificatesSection = () => {
                 whileHover={{ y: -10, scale: 1.02 }}
                 className="glass-card rounded-2xl sm:rounded-3xl p-6 sm:p-8 border-2 border-gray-100 hover:border-orange-500 transition-all group cursor-pointer h-full flex flex-col"
               >
-                <div className="space-y-4 sm:space-y-6 flex-1 flex flex-col">
+                <div className="space-y-5 sm:space-y-6 flex-1 flex flex-col">
                   {/* Certificate Icon */}
                   <div className="flex items-center justify-between">
-                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl sm:rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
-                      <Award className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl sm:rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
+                      <Award className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                     </div>
                     <motion.a
                       href={`https://${cert.url}`}
@@ -46,14 +46,14 @@ const CertificatesSection = () => {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
-                      className="w-8 h-8 sm:w-10 sm:h-10 bg-gray-100 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors group-hover:bg-orange-500 shadow-sm"
+                      className="w-7 h-7 sm:w-8 sm:h-8 bg-gray-100 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors group-hover:bg-orange-500 shadow-sm"
                     >
-                      <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600 group-hover:text-white transition-colors" />
+                      <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 text-gray-600 group-hover:text-white transition-colors" />
                     </motion.a>
                   </div>
 
                   {/* Certificate Content */}
-                  <div className="space-y-3 sm:space-y-4 flex-1 flex flex-col">
+                  <div className="space-y-4 sm:space-y-5 flex-1 flex flex-col">
                     <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black group-hover:text-orange-600 transition-colors leading-tight">
                       {cert.title}
                     </h3>

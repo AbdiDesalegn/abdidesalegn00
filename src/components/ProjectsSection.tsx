@@ -81,8 +81,8 @@ const ProjectsSection = () => {
                           transition={{ duration: 0.3 }}
                           className="absolute top-4 right-4 z-10"
                         >
-                          <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/30">
-                            <Code className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
+                          <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/30">
+                            <Code className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                           </div>
                         </motion.div>
                       </>
@@ -94,8 +94,8 @@ const ProjectsSection = () => {
                           transition={{ duration: 0.3 }}
                           className="relative z-10 flex items-center justify-center h-full"
                         >
-                          <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl flex items-center justify-center border border-white/20">
-                            <Code className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-white" />
+                          <div className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl flex items-center justify-center border border-white/20">
+                            <Code className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-white" />
                           </div>
                         </motion.div>
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -103,15 +103,15 @@ const ProjectsSection = () => {
                     )}
                   </div>
                   
-                  <div className="p-4 sm:p-6 md:p-8 flex-1 flex flex-col">
-                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 text-black group-hover:text-orange-500 transition-colors">
+                  <div className="p-5 sm:p-6 md:p-8 flex-1 flex flex-col">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-4 sm:mb-5 text-black group-hover:text-orange-500 transition-colors">
                       {project.title}
                     </h3>
-                    <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 leading-relaxed flex-1">
+                    <p className="text-sm sm:text-base text-gray-600 mb-5 sm:mb-6 leading-relaxed flex-1">
                       {project.description}
                     </p>
                     
-                    <div className="flex flex-wrap gap-2 sm:gap-3 mb-4 sm:mb-6">
+                    <div className="flex flex-wrap gap-2 sm:gap-3 mb-5 sm:mb-6">
                       {project.stack.map((tech) => (
                         <span
                           key={tech}
@@ -122,13 +122,13 @@ const ProjectsSection = () => {
                       ))}
                     </div>
                     
-                    <div className="flex gap-2 sm:gap-3 md:gap-4 pt-3 sm:pt-4 border-t-2 border-gray-100">
+                    <div className="flex gap-2 sm:gap-3 md:gap-4 pt-4 sm:pt-5 border-t-2 border-gray-100">
                       <motion.a
                         href={project.github}
                         whileHover={{ scale: 1.05, y: -2 }}
                         className="flex items-center gap-1 sm:gap-2 text-black hover:text-orange-500 transition-all duration-300 font-bold px-3 py-2 sm:px-4 sm:py-2 rounded-full hover:bg-orange-50 text-sm sm:text-base"
                       >
-                        <Github className="w-4 h-4 sm:w-5 sm:h-5" />
+                        <Github className="w-3 h-3 sm:w-4 sm:h-4" />
                         Code
                       </motion.a>
                       <motion.a
@@ -136,7 +136,7 @@ const ProjectsSection = () => {
                         whileHover={{ scale: 1.05, y: -2 }}
                         className="flex items-center gap-1 sm:gap-2 text-black hover:text-orange-500 transition-all duration-300 font-bold px-3 py-2 sm:px-4 sm:py-2 rounded-full hover:bg-orange-50 text-sm sm:text-base"
                       >
-                        <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5" />
+                        <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
                         Demo
                       </motion.a>
                     </div>

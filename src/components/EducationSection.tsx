@@ -45,7 +45,7 @@ const EducationSection = () => {
                     transition={{ duration: 0.4 }}
                     className="relative flex-shrink-0 mx-auto lg:mx-0"
                   >
-                    <div className="education-photo w-32 h-40 sm:w-40 sm:h-48 md:w-48 md:h-56 rounded-xl sm:rounded-2xl overflow-hidden relative">
+                    <div className="education-photo w-28 h-36 sm:w-36 sm:h-44 md:w-44 md:h-52 rounded-xl sm:rounded-2xl overflow-hidden relative">
                       <Image
                         src="/profile-photo.png"
                         alt="Abdi's Photo"
@@ -57,7 +57,7 @@ const EducationSection = () => {
                       <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     </div>
                     <div className="education-badge">
-                      <span className="text-white text-sm sm:text-base md:text-lg">🎓</span>
+                      <span className="text-white text-xs sm:text-sm md:text-base">🎓</span>
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-br from-orange-400/30 to-red-400/30 rounded-xl sm:rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
                   </motion.div>
@@ -74,7 +74,7 @@ const EducationSection = () => {
                           Adama Science and Technology University
                         </p>
                         <div className="flex items-center gap-2 text-sm sm:text-base md:text-lg text-gray-600 font-semibold">
-                          <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                           </svg>
                           2021 - 2025
@@ -82,7 +82,7 @@ const EducationSection = () => {
                       </div>
                     </div>
                     
-                    <div className="bg-white/60 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 border-2 border-gray-100 hover:border-orange-500 transition-all">
+                    <div className="bg-white/60 backdrop-blur-sm rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 border-2 border-gray-100 hover:border-orange-500 transition-all">
                       <p className="text-gray-800 leading-relaxed text-sm sm:text-base md:text-lg font-medium">
                         Comprehensive study of computer science fundamentals, software engineering, 
                         advanced mathematics, and computational physics. Specialized coursework in 

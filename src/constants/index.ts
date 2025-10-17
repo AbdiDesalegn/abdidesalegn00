@@ -10,7 +10,6 @@ import {
   Brain,
   Atom,
   MessageCircle,
-  Facebook,
   BookOpen
 } from 'lucide-react';
 import { Project, BlogPost, Skill, ContactInfo, SocialLink } from '@/types';
@@ -139,7 +138,6 @@ export const CONTACT_INFO: ContactInfo[] = [
 export const SOCIAL_LINKS: SocialLink[] = [
   { Icon: Github, href: 'https://github.com/AbdiDesalegn', label: 'GitHub', color: 'hover:bg-gray-900' },
   { Icon: MessageCircle, href: 'https://t.me/abdidesalegn', label: 'Telegram', color: 'hover:bg-blue-500' },
-  { Icon: Facebook, href: 'https://web.facebook.com/abdidesalegn00', label: 'Facebook', color: 'hover:bg-blue-600' },
   { Icon: BookOpen, href: 'https://sciencedatafusion.blogspot.com', label: 'Blog', color: 'hover:bg-orange-500' },
   { Icon: Linkedin, href: 'https://www.linkedin.com/in/abdidesalegn', label: 'LinkedIn', color: 'hover:bg-blue-700' }
 ];
