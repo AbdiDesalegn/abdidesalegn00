@@ -1,6 +1,5 @@
 import { 
   Github, 
-  Linkedin, 
   Twitter, 
   Mail, 
   Phone, 
@@ -9,9 +8,10 @@ import {
   Shield,
   Brain,
   Atom,
-  MessageCircle,
   BookOpen
 } from 'lucide-react';
+import TelegramIcon from '@/components/TelegramIcon';
+import LinkedInIcon from '@/components/LinkedInIcon';
 import { Project, BlogPost, Skill, ContactInfo, SocialLink } from '@/types';
 
 export const SKILLS: Skill[] = [
@@ -137,9 +137,9 @@ export const CONTACT_INFO: ContactInfo[] = [
 
 export const SOCIAL_LINKS: SocialLink[] = [
   { Icon: Github, href: 'https://github.com/AbdiDesalegn', label: 'GitHub', color: 'hover:bg-gray-900' },
-  { Icon: MessageCircle, href: 'https://t.me/abdidesalegn', label: 'Telegram', color: 'hover:bg-blue-500' },
+  { Icon: TelegramIcon, href: 'https://t.me/abdidesalegn', label: 'Telegram', color: 'hover:bg-blue-500' },
   { Icon: BookOpen, href: 'https://sciencedatafusion.blogspot.com', label: 'Blog', color: 'hover:bg-orange-500' },
-  { Icon: Linkedin, href: 'https://www.linkedin.com/in/abdidesalegn', label: 'LinkedIn', color: 'hover:bg-blue-700' }
+  { Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/abdidesalegn', label: 'LinkedIn', color: 'hover:bg-blue-700' }
 ];
 
 export const PROJECT_CATEGORIES = ['All', 'Development', 'Web', 'Mobile', 'Cybersecurity', 'Physics', 'AI & ML'];
@@ -227,5 +227,11 @@ export const CERTIFICATES = [
     issuer: 'Udemy',
     url: 'ude.my/UC-e4b3b248-5308-462a-bdc9-13975c0bbOd5',
     description: 'Advanced digital forensics techniques, evidence collection, and forensic analysis methodologies.'
+  },
+  {
+    title: 'Reverse Engineering & Malware Analysis in 21 Hours | REMAC+',
+    issuer: 'Udemy',
+    url: 'ude.my/UC-48a8fbb6-81dc-4d4e-8a3f-e5f9e690f617',
+    description: 'Comprehensive course on reverse engineering techniques and malware analysis methodologies for cybersecurity professionals.'
   }
 ];

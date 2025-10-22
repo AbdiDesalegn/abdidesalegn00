@@ -92,7 +92,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.2 }}
-          className="mt-16 sm:mt-20 md:mt-24 flex justify-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 flex-wrap"
+          className="mt-8 sm:mt-12 md:mt-16 flex justify-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 flex-wrap"
         >
           {SOCIAL_LINKS.map(({ Icon, href, label }) => (
             <motion.a
