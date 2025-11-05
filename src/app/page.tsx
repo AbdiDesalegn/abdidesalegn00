@@ -25,8 +25,23 @@ export default function Home() {
                 "@type": "Person",
                 name: "Abdi Desalegn",
                 url: SITE_URL,
-                image: `${SITE_URL}/profile-photo.png`,
+                image: [
+                  `${SITE_URL}/profile-photo.png`,
+                  `${SITE_URL}/og-image.png`
+                ],
                 jobTitle: "Software Engineer",
+                description: "Computer Science and Engineering graduate passionate about development, physics, and cybersecurity.",
+                knowsAbout: [
+                  "Software Engineering",
+                  "Web Development",
+                  "Mobile Development",
+                  "Computational Physics",
+                  "Cybersecurity"
+                ],
+                alumniOf: {
+                  "@type": "EducationalOrganization",
+                  name: "Addis Ababa University"
+                },
                 sameAs: [
                   "https://github.com/AbdiDesalegn",
                   "https://www.linkedin.com/in/abdidesalegn",
@@ -36,8 +51,29 @@ export default function Home() {
               {
                 "@context": "https://schema.org",
                 "@type": "WebSite",
+                name: "Abdi Desalegn - Portfolio",
+                url: SITE_URL,
+                image: `${SITE_URL}/og-image.png`,
+                description: "Computer Science and Engineering graduate passionate about development, physics, and cybersecurity.",
+                author: {
+                  "@type": "Person",
+                  name: "Abdi Desalegn"
+                }
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
                 name: "Abdi Desalegn",
-                url: SITE_URL
+                url: SITE_URL,
+                logo: [
+                  `${SITE_URL}/logo.svg`,
+                  `${SITE_URL}/icon-512.png`
+                ],
+                image: `${SITE_URL}/profile-photo.png`,
+                founder: {
+                  "@type": "Person",
+                  name: "Abdi Desalegn"
+                }
               }
             ],
             null,

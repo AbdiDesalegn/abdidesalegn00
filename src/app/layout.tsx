@@ -42,8 +42,20 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/"
   },
+  icons: {
+    icon: [
+      { url: "/logo.svg", type: "image/svg+xml" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" }
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }
+    ],
+    shortcut: "/favicon.ico"
+  },
+  manifest: "/manifest.json",
   openGraph: {
-    type: "website",
+    type: "profile",
     locale: "en_US",
     url: "/",
     title: "Abdi Desalegn - Portfolio",
@@ -52,19 +64,30 @@ export const metadata: Metadata = {
     siteName: "Abdi Desalegn",
     images: [
       {
-        url: "/profile-photo.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
+        alt: "Abdi Desalegn - Software Engineer & Developer"
+      },
+      {
+        url: "/profile-photo.png",
+        width: 1200,
+        height: 1200,
         alt: "Abdi Desalegn"
       }
-    ]
+    ],
+    profile: {
+      firstName: "Abdi",
+      lastName: "Desalegn",
+      username: "abdidesalegn"
+    }
   },
   twitter: {
     card: "summary_large_image",
     title: "Abdi Desalegn - Portfolio",
     description:
       "Computer Science and Engineering graduate passionate about development, physics, and cybersecurity.",
-    images: ["/profile-photo.png"]
+    images: ["/og-image.png"]
   },
 };
 

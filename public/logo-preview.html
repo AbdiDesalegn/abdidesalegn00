@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABDI Logo Preview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+        .preview-section {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .logo-container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .size-info {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>ABDI Logo Preview</h1>
+    
+    <div class="preview-section">
+        <h2>Main Logo (200x200)</h2>
+        <img src="logo.svg" alt="ABDI Logo" style="width: 200px; height: 200px;">
+        <div class="size-info">Used for: Favicon, App Icons</div>
+    </div>
+    
+    <div class="preview-section">
+        <h2>Open Graph Image (1200x630)</h2>
+        <img src="og-image.svg" alt="ABDI Open Graph" style="width: 600px; max-width: 100%; height: auto;">
+        <div class="size-info">Used for: Google Search Results, Social Media Sharing</div>
+    </div>
+    
+    <div class="preview-section">
+        <h2>Favicon Preview (16x16)</h2>
+        <img src="logo.svg" alt="ABDI Favicon" style="width: 16px; height: 16px; image-rendering: crisp-edges;">
+        <div class="size-info">Actual size: 16x16 pixels</div>
+    </div>
+    
+    <div style="max-width: 600px; padding: 20px; background: #fff3cd; border-radius: 8px; margin-top: 20px;">
+        <h3 style="margin-top: 0;">📝 Next Steps:</h3>
+        <ol style="text-align: left;">
+            <li>Open this file in your browser to preview the logos</li>
+            <li>If the logos look good, generate PNG/ICO files using one of these methods:</li>
+            <ul>
+                <li><strong>Automated:</strong> Run <code>npm run generate-logos</code> (requires sharp package)</li>
+                <li><strong>Manual:</strong> Use online converters (see LOGO-SETUP.md)</li>
+            </ul>
+            <li>Place generated files in the <code>public/</code> folder</li>
+            <li>Test using Google Search Console and social media debuggers</li>
+        </ol>
+    </div>
+</body>
+</html>
+
