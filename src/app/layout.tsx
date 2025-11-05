@@ -64,16 +64,16 @@ export const metadata: Metadata = {
     siteName: "Abdi Desalegn",
     images: [
       {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Abdi Desalegn - Software Engineer & Developer"
-      },
-      {
         url: "/profile-photo.png",
         width: 1200,
         height: 1200,
         alt: "Abdi Desalegn"
+      },
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Abdi Desalegn - Software Engineer & Developer"
       }
     ],
     profile: {
@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     title: "Abdi Desalegn - Portfolio",
     description:
       "Computer Science and Engineering graduate passionate about development, physics, and cybersecurity.",
-    images: ["/og-image.png"]
+    images: ["/og-image.png", "/profile-photo.png"]
   },
 };
 
