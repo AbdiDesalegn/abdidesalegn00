@@ -75,12 +75,7 @@ export const metadata: Metadata = {
         height: 630,
         alt: "Abdi Desalegn - Software Engineer & Developer"
       }
-    ],
-    profile: {
-      firstName: "Abdi",
-      lastName: "Desalegn",
-      username: "abdidesalegn"
-    }
+    ]
   },
   twitter: {
     card: "summary_large_image",
