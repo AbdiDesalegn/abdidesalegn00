@@ -1,6 +1,5 @@
 import { 
   Github, 
-  Twitter, 
   Mail, 
   Phone, 
   MapPin,
