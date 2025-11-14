@@ -149,38 +149,14 @@ export const NAVIGATION_ITEMS = ['About', 'Experience', 'Projects', 'Certificate
 // Experience data
 export const EXPERIENCE = [
   {
-    company: 'INSA, Cyber Talent',
-    position: 'AV Developer',
-    period: '2022 – 2023',
-    location: 'Ethiopia',
+    company: 'GSEZDC (Gada Special Economic Zone Development Corporation)',
+    position: 'Fullstack Developer',
+    period: '2025 – Present',
+    location: 'Adama, Ethiopia',
     description: [
-      'Worked on developing and testing antivirus (AV) solutions in C.',
-      'Implemented detection mechanisms for malware and security threats.',
-      'Gained hands-on experience with firewall operations and configuration on Linux systems.'
-    ]
-  },
-  {
-    company: 'Competitive Programming Division (CPD)',
-    position: 'Member',
-    period: '2022 – 2024',
-    location: 'ASTU',
-    description: [
-      'Participated in university-level competitive programming contests representing ASTU.',
-      'Solved algorithmic and computational problems using C++ and Python.',
-      'Enhanced skills in problem solving, data structures, and algorithm design.'
-    ]
-  },
-  {
-    company: 'INSA',
-    position: 'MERN Stack Developer Intern',
-    period: '2023 – 2024',
-    location: 'Ethiopia',
-    description: [
-      'Developed a full-stack chat application using MERN stack technologies.',
-      'Implemented real-time messaging features with WebSocket integration.',
-      'Built responsive frontend components using React.js and modern UI/UX principles.',
-      'Designed and developed RESTful APIs using Node.js and Express.js.',
-      'Managed database operations and data modeling with MongoDB.'
+      'Building and maintaining web systems that support land management, investor services, and internal operations.',
+      'Developing full-stack solutions for industrial zone infrastructure and digital services for investors and administrators.',
+      'Contributing to the development and management of digital services that enhance operational efficiency.'
     ]
   },
   {
@@ -204,6 +180,41 @@ export const EXPERIENCE = [
       'Contributed to organizing and playing CTF (Capture The Flag) competitions.',
       'Delivered and assisted in seminars and workshops on cybersecurity topics.',
       'Learned advanced skills in network security, system hardening, and practical cybersecurity tools.'
+    ]
+  },
+  {
+    company: 'INSA',
+    position: 'MERN Stack Developer Intern',
+    period: '2023 – 2024',
+    location: 'Ethiopia',
+    description: [
+      'Developed a full-stack chat application using MERN stack technologies.',
+      'Implemented real-time messaging features with WebSocket integration.',
+      'Built responsive frontend components using React.js and modern UI/UX principles.',
+      'Designed and developed RESTful APIs using Node.js and Express.js.',
+      'Managed database operations and data modeling with MongoDB.'
+    ]
+  },
+  {
+    company: 'Competitive Programming Division (CPD)',
+    position: 'Member',
+    period: '2022 – 2024',
+    location: 'ASTU',
+    description: [
+      'Participated in university-level competitive programming contests representing ASTU.',
+      'Solved algorithmic and computational problems using C++ and Python.',
+      'Enhanced skills in problem solving, data structures, and algorithm design.'
+    ]
+  },
+  {
+    company: 'INSA, Cyber Talent',
+    position: 'AV Developer',
+    period: '2022 – 2023',
+    location: 'Ethiopia',
+    description: [
+      'Worked on developing and testing antivirus (AV) solutions in C.',
+      'Implemented detection mechanisms for malware and security threats.',
+      'Gained hands-on experience with firewall operations and configuration on Linux systems.'
     ]
   }
 ];
